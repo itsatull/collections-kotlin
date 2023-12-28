@@ -20,45 +20,41 @@ object test {
 
         //key can not be duplicate
         //value can be duplicate
-        map[5] = "atul"
-        map[10] = "atul"
-        map[5] = "java" // override the value at the 5
-        map[18] = "rahul"
-        map[99] = "ravi"
-        map[9] = "ravi"
-        map[10] = "RAJAT"
-
+        map.put(5,"atul")
+        map.put(18,"atul")
+        map.put(5,"java")
+        map.put(99,"ravi")
+        map.put(10,"atul")
         println(map)
 
         //duplicate key not recomended.
         //value can be duplicate
         //cant maintain order,no sorting.
-        map1[5] = "atul"
-        map1[10] = "atul"
-        map1[5] = "java" // override the value at the 5 key
-        map1[18] = "rahul"
-        map1[99] = "ravi"
-        map1[9] = "ravi"
-        map1[10] = "RAJAT"
-
+        map1.put(5,"atul")
+        map1.put(10,"atul")
+        map1.put(5,"rahul")// override the value at the 5 key
+        map1.put(18,"rahul")
+        map1.put(99,"RAJAT")
         println(map1)
 
         //duplicate key not recomended.
         //value can be duplicate.
         //sorting.
-        map2[5] = "atul"
-        map2[10] = "atul"
-        map2[5] = "java" // override the value at the 5 key
-        map2[18] = "rahul"
-        map2[99] = "ravi"
-        map2[9] = "ravi"
-        map2[10] = "RAJAT"
+        map2.put(5,"atul")
+        map2.put(10,"atul")
+        map2.put(5,"rahul")// override the value at the 5 key
+        map2.put(18,"rahul")
+        map2.put(99,"RAJAT")
 
         println(map2)
-        val i = map[5]
+        val i = map[5]  //--->
 
-        println(map[5]) //o(1) operation
-        println(map1[5]) //o(1) operation
+        println(map.get(5)) //o(1) operation
+        println(map.get(5000000)) //o(1) operation -- return null if value not found.
+        println(map.containsKey(5))// --> return bollean
+        println(map1.get(5)) //o(1) operation
+        println(map1.get(5)) //o(1) operation
         println(map2[5]) //o(log n) operation
+        println(map2[50000]) //o(log n) operation
     }
 }

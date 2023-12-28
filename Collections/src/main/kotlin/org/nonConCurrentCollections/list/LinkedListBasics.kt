@@ -21,22 +21,31 @@ object LinkedListBasics {
         val timeTankentoInsert1: MutableList<Long> = LinkedList()
         var start: Long
         var finish: Long
-        for (i in 0..999) {
-            start = System.nanoTime()
-            list.add(i)
-            finish = System.nanoTime()
-            val timeElapsed = finish - start
-            timeTankentoInsert.add(timeElapsed)
-        }
-        println(list)
-        println(timeTankentoInsert)
-        for (i in 999 downTo -1 + 1) {
-            start = System.nanoTime()
-            list.removeAt(i)
-            finish = System.nanoTime()
-            val timeElapsed = finish - start
-            timeTankentoInsert1.add(timeElapsed)
-        }
-        println(timeTankentoInsert1)
+        // add at the Head (Begning)
+        list.add(5)
+        list.addFirst(10) //recomended way
+        list.addFirst(15)
+        list.addFirst(20)
+        list.addFirst(21)
+        list.addFirst(22)
+        list.addFirst(25) //recomended way
+
+        list.remove(22) // O(N) -- operation
+
+        //remove element from begning
+        list.removeFirst() //recomended way
+
+        //add elemnt att tail
+        list.addLast(200000) //recomended
+
+        //remove elemnt form tail
+        list.removeLast() // recomended way
+
+
+        //get first element
+        println(list.first())
+
+        //get last element
+        println(list.last())
     }
 }
