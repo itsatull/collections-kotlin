@@ -16,7 +16,7 @@ object LinkedListBasics {
      */
     @JvmStatic
     fun main(args: Array<String>) {
-        val list: MutableList<Int> = LinkedList() // type defined can only store Integer values
+        val list = LinkedList<Any>() // type defined can only store Integer values
         val timeTankentoInsert: MutableList<Long> = LinkedList()
         val timeTankentoInsert1: MutableList<Long> = LinkedList()
         var start: Long
